@@ -1,7 +1,7 @@
 <body>
   <h1 class="b">Conor Dowdall's GitHub</h1>
   <p>
-    <span class="g">conor@github</span><span class="w">:</span
+    <span style="font-weight: bold;">conor@github</span><span class="w">:</span
     ><span class="b">~</span><span class="w">$</span><span>&nbsp;</span>whoami
   </p>
   <p>I am a software developer from Ireland.</p>
