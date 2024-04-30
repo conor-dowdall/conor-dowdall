@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conor Dowdall | GitHub</title>
+
+    <style>
+      html {
+        --terminal-border: #40464d;
+        --terminal-header: #2a2e32;
+        --black: #232627;
+        --white: #fcfcfc;
+        --blue: #3daee9;
+        --green: #1cdc9a;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: var(--black);
+        color: var(--white);
+        font-family: "Courier New", Courier, monospace;
+        display: grid;
+        place-content: center;
+      }
+
+      main {
+        max-width: 75ch;
+        border: 0.2rem solid var(--terminal-border);
+        border-radius: 0.5rem;
+        padding: 0;
+      }
+
+      section {
+        padding: 0.5rem;
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0.7rem 0.3rem;
+        background-color: var(--terminal-header);
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        margin: 0.7rem 0.3rem;
+      }
+
+      .b {
+        color: var(--black);
+      }
+
+      .w {
+        color: var(--white);
+      }
+
+      .b {
+        color: var(--blue);
+      }
+
+      .g {
+        color: var(--green);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1 class="b">Conor Dowdall | GitHub</h1>
+
+      <section>
+        <h3><span class="prompt"></span>whoami</h3>
+        <ul>
+          <li>I am a software developer from Ireland.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3><span class="prompt"></span>whichlangs</h3>
+        <ul>
+          <li>
+            I enjoy <span class="b">HTML</span>, <span class="b">CSS</span>, and
+            <span class="b">JavaScript</span>, because they allow elements of
+            visual creativity - like art!
+          </li>
+          <li>
+            I have developed applications using <span class="b">C++</span>, and
+            have recently learned <span class="b">Java</span>.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <template id="prompt-template">
+      <span class="g">conor@github</span><span class="w">:</span
+      ><span class="b">~</span><span class="w">$</span
+      ><span>&nbsp;</span></template
+    >
+  </body>
+  <script>
+    const promptTemplate = document.getElementById("prompt-template");
+    const prompts = document.querySelectorAll(".prompt");
+    prompts.forEach((prompt) => {
+      const promptClone = promptTemplate.content.cloneNode(true);
+      prompt.append(promptClone);
+    });
+  </script>
+</html>
