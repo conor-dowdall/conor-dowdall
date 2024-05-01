@@ -1,6 +1,6 @@
 # Conor Dowdall | GitHub
 
-## [Visit the HTML Version](https://conor-dowdall.github.io/conor-dowdall/)
+## [Go to the HTML Version](https://conor-dowdall.github.io/conor-dowdall/)
 
 ### conor@github:~$ whoami
 
