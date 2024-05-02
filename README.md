@@ -6,7 +6,7 @@
 
 - I am a human being from Ireland. I enjoy developing software and I am currently doing a HDip in Science in Software Development.
 - I also enjoy playing music and a bit of Tai Chi.
-- My passion project is Muso Dojo, which combines music, with music education, and software development.
+- My passion project is [Muso Dojo](https://sites.google.com/view/musodojo), which combines music, with music education, and software development.
 
 ### conor@github:~$ qualifications
 
