@@ -17,7 +17,8 @@
       }
 
       body {
-        min-height: 100vh;
+        margin: 0;
+        min-height: 100svh;
         background-color: var(--black);
         color: var(--white);
         font-family: "Courier New", Courier, monospace;
@@ -27,6 +28,9 @@
 
       main {
         max-width: 75ch;
+        max-height: 100svh;
+        box-sizing: border-box;
+        overflow-y: auto;
         border: 0.2rem solid var(--terminal-border);
         border-radius: 0.5rem;
         padding: 0;
@@ -82,10 +86,10 @@
         <h3><span class="prompt"></span>whoami</h3>
         <ul>
           <li>
-            I am a human being from Ireland. I enjoy developing software and I
+            I am a homo sapien from Ireland. I enjoy developing software and I
             am currently doing a HDip in Science in Software Development.
           </li>
-          <li>I also enjoy playing music and a bit of Tai Chi.</li>
+          <li>I also enjoy playing music and doing a bit of Tai Chi.</li>
           <li>
             My passion project is
             <a href="https://sites.google.com/view/musodojo" target="_blank"
@@ -123,6 +127,7 @@
             <span class="b">Java</span>.
           </li>
           <li>
+            Experience with:
             <span class="b">Vite</span>; <span class="b">Node</span>;
             <span class="b">npm</span>; <span class="b">Git</span>;
             <span class="b">GitHub</span>; <span class="b">GitHub Pages</span>;
@@ -133,11 +138,12 @@
     </main>
 
     <template id="prompt-template">
-      <span class="g">conor@github</span><span class="w">:</span
+      <span class="g">conor-dowdall@github</span><span class="w">:</span
       ><span class="b">~</span><span class="w">$</span
       ><span>&nbsp;</span></template
     >
   </body>
+
   <script>
     const promptTemplate = document.getElementById("prompt-template");
     const prompts = document.querySelectorAll(".prompt");
