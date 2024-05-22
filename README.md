@@ -20,3 +20,9 @@
 - I enjoy HTML, CSS, and JavaScript, because they allow elements of visual creativity - like art!
 - I have developed applications using C and C++, and have recently learned Java.
 - Experience with: Vite; Node; npm; Git; GitHub; GitHub Pages; Google Play App Store.
+
+### conor-dowdall@github:~$ quotedata
+
+I am attempting to fill a silent moment with non-relevant conversation.
+
+\- Lt. Cmdr. Data, _Star Trek: The Next Generation_
