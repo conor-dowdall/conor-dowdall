@@ -21,7 +21,7 @@
 ### conor-dowdall@github:~$ codingxp
 
 - HTML, CSS, and JavaScript are wonderful because they allow elements of visual creativity.
-- Developing software using AI tools, like Gemini, Claude, and Chat GPT is great!
+- Developing software using AI tools, like Gemini, Claude, and ChatGPT is great!
 - I have developed applications using C, C++, and Qt; as well as JavaScript and TypeScript.
 - HDip with emphasis on Java and word-embedding projects: Algorithms; SQL / Database Design; Agile; Cloud Computing / Azure / AWS; Angular;
 - Experienced with Vite; Node; npm; Deno; JSON; Git; GitHub; GitHub Pages; Google Play App Store.
