@@ -4,7 +4,9 @@
 
 ### conor-dowdall@github:~$ whoami
 
-- I am a homo sapien from Ireland. I enjoy developing software and I am currently doing a HDip in Science in Software Development.
+- I am a homo sapien from Ireland.
+- I enjoy developing software!
+- I recently got First Class Honours in a HDip in Science in Software Development.
 - I also enjoy playing music and doing a bit of Tai Chi.
 - My passion project is Muso Dojo, which combines music, with music education, and software development.
 
