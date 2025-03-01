@@ -4,24 +4,28 @@
 
 ### conor-dowdall@github:~$ whoami
 
-- I am a homo sapien from Ireland.
-- I enjoy developing software!
-- I recently got First Class Honours in a HDip in Science in Software Development.
+- Hi, I'm from Ireland!
+- I enjoy developing software and I mostly use Linux - with KDE.
+- Recent First Class Honours for a HDip in Science in Software Development.
 - I also enjoy playing music and doing a bit of Tai Chi.
-- My passion project is Muso Dojo, which combines music, with music education, and software development.
+- My passion project is [Muso Dojo](https://sites.google.com/view/musodojo), which combines music, with music education, and software development.
 
 ### conor-dowdall@github:~$ qualifications
 
-- NFQ Level 9 Certificate in Innovation, Entrepreneurship and Enterprise
-- MSc Science - Physics and Instrumentation
+- HDip in Science in Software Development - First Class Honours
+- NFQ Level 9 Certificate in Innovation, Entrepreneurship and Enterprise - Master's Level equivalent Certificate
+- MSc Science - Physics and Instrumentation - Researched gamma-rays with the [VERITAS](https://veritas.sao.arizona.edu/) astrophysical collaboration
 - BAI Electronic Engineering
 - BA Engineering Mathematics
 
 ### conor-dowdall@github:~$ codingxp
 
-- I enjoy HTML, CSS, and JavaScript, because they allow elements of visual creativity - like art!
-- I have developed applications using C and C++, and have recently learned Java.
-- Experience with: Vite; Node; npm; Git; GitHub; GitHub Pages; Google Play App Store.
+- HTML, CSS, and JavaScript are wonderful because they allow elements of visual creativity.
+- Developing software using AI tools, like Gemini, Claude, and Chat GPT is great!
+- I have developed applications using C, C++, and Qt; as well as JavaScript and TypeScript.
+- HDip with emphasis on Java and word-embedding projects: Algorithms; SQL / Database Design; Agile; Cloud Computing / Azure / AWS; Angular;
+- Experienced with Vite; Node; npm; Deno; JSON; Git; GitHub; GitHub Pages; Google Play App Store.
+- Also familiar with Bash scripting, Perl, Matlab, LaTeX.
 
 ### conor-dowdall@github:~$ quotedata
 
