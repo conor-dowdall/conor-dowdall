@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conor Dowdall | GitHub</title>
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --terminal-border: #40464d;
+        --terminal-header: #2a2e32;
+        --black: #232627;
+        --white: #fcfcfc;
+        --blue: #3daee9;
+        --green: #1cdc9a;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100svh;
+        background-color: var(--black);
+        color: var(--white);
+        font-family: "Courier New", Courier, monospace;
+        display: grid;
+        place-content: center;
+      }
+
+      main {
+        max-width: 75ch;
+        max-height: 100svh;
+        box-sizing: border-box;
+        overflow-y: auto;
+        border: 0.2rem solid var(--terminal-border);
+        border-radius: 0.5rem;
+        padding: 0;
+      }
+
+      section {
+        padding: 0.5rem;
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0.7rem 0.3rem;
+        background-color: var(--terminal-header);
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li,
+      blockquote {
+        margin: 0.7rem 0.3rem;
+      }
+
+      .b {
+        color: var(--black);
+      }
+
+      .w {
+        color: var(--white);
+      }
+
+      .b {
+        color: var(--blue);
+      }
+
+      .g {
+        color: var(--green);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1 class="b">Conor Dowdall | GitHub</h1>
+
+      <section>
+        <h3><span class="prompt"></span>whoami</h3>
+        <ul>
+          <li>Software developer, comfortable in Linux environments.</li>
+          <li>First Class Honours for a HDip in Software Development.</li>
+          <li>I enjoy playing music.</li>
+          <li>
+            My passion project is
+            <a href="https://sites.google.com/view/musodojo" target="_blank"
+              >Muso Dojo</a
+            >, which combines music, with music education, and software
+            development.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3><span class="prompt"></span>qualifications</h3>
+        <ul>
+          <li>HDip in Science in Software Development - First Class Honours</li>
+          <li>
+            NFQ Level 9 Certificate in Innovation, Entrepreneurship and
+            Enterprise - Master's Level equivalent Certificate
+          </li>
+          <li>
+            MSc Science - Physics and Instrumentation - Researched gamma-rays
+            with the
+            <a href="https://veritas.sao.arizona.edu/" target="_blank"
+              >VERITAS</a
+            >
+            astrophysical collaboration
+          </li>
+          <li>BAI Electronic Engineering</li>
+          <li>BA Engineering Mathematics</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3><span class="prompt"></span>codingxp</h3>
+        <ul>
+          <li>
+            HTML, CSS, and JavaScript are wonderful because they allow elements
+            of visual creativity.
+          </li>
+          <li>
+            Developing software using AI tools, like Gemini, Claude, and ChatGPT
+            is great!
+          </li>
+          <li>
+            I have developed applications using C, C++, and Qt; as well as
+            JavaScript and TypeScript.
+          </li>
+          <li>
+            HDip with emphasis on Java and word-embedding projects: Algorithms;
+            SQL / Database Design; Agile; Cloud Computing / Azure / AWS;
+            Angular;
+          </li>
+          <li>
+            Experienced with Vite; Node; npm; Deno; JSON; Git; GitHub; GitHub
+            Pages; Google Play App Store.
+          </li>
+          <li>Also familiar with Bash scripting, Perl, Matlab, LaTeX.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3><span class="prompt"></span>quotedata</h3>
+        <blockquote>
+          <p>
+            I am attempting to fill a silent moment with non-relevant
+            conversation.
+          </p>
+          <footer>
+            - Lt. Cmdr. Data, <cite>Star Trek: The Next Generation</cite>
+          </footer>
+        </blockquote>
+      </section>
+    </main>
+
+    <template id="prompt-template">
+      <span class="g">conor-dowdall@github</span><span class="w">:</span
+      ><span class="b">~</span><span class="w">$</span
+      ><span>&nbsp;</span></template
+    >
+  </body>
+
+  <script>
+    const promptTemplate = document.getElementById("prompt-template");
+    const prompts = document.querySelectorAll(".prompt");
+    prompts.forEach((prompt) => {
+      const promptClone = promptTemplate.content.cloneNode(true);
+      prompt.append(promptClone);
+    });
+  </script>
+</html>
