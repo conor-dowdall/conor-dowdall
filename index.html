@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conor Dowdall | GitHub</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥️</text></svg>"
+    >
 
     <style>
       :root {
         color-scheme: dark;
-        --terminal-border: #40464d;
         --terminal-header: #2a2e32;
         --black: #232627;
         --white: #fcfcfc;
@@ -28,16 +31,14 @@
 
       main {
         max-width: 75ch;
-        max-height: 100svh;
+        width: 100%;
+        height: 80svh;
         box-sizing: border-box;
-        overflow-y: auto;
-        border: 0.2rem solid var(--terminal-border);
+        border: 0.2rem solid var(--terminal-header);
         border-radius: 0.5rem;
         padding: 0;
-      }
-
-      section {
-        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
       }
 
       h1 {
@@ -46,23 +47,14 @@
         background-color: var(--terminal-header);
       }
 
-      h3 {
-        margin: 0;
-      }
-
       ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
       }
 
-      li,
-      blockquote {
+      li {
         margin: 0.7rem 0.3rem;
-      }
-
-      .b {
-        color: var(--black);
       }
 
       .w {
@@ -76,105 +68,138 @@
       .g {
         color: var(--green);
       }
+
+      a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      #terminal {
+        padding: 0.5rem;
+        flex-grow: 1;
+        overflow-y: auto;
+      }
+
+      .prompt-input-line {
+        display: flex;
+      }
+
+      #prompt-input {
+        background: transparent;
+        border: none;
+        color: var(--white);
+        font-family: inherit;
+        font-size: inherit;
+        flex-grow: 1;
+        outline: none;
+      }
+
+      .output {
+        margin: 0.7rem 0.3rem;
+      }
     </style>
   </head>
 
   <body>
     <main>
       <h1 class="b">Conor Dowdall | GitHub</h1>
-
-      <section>
-        <h3><span class="prompt"></span>whoami</h3>
-        <ul>
-          <li>Software developer, comfortable in Linux environments.</li>
-          <li>First Class Honours for a HDip in Software Development.</li>
-          <li>I enjoy playing music.</li>
-          <li>
-            My passion project is
-            <a href="https://sites.google.com/view/musodojo" target="_blank"
-              >Muso Dojo</a
-            >, which combines music, with music education, and software
-            development.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h3><span class="prompt"></span>qualifications</h3>
-        <ul>
-          <li>HDip in Science in Software Development - First Class Honours</li>
-          <li>
-            NFQ Level 9 Certificate in Innovation, Entrepreneurship and
-            Enterprise - Master's Level equivalent Certificate
-          </li>
-          <li>
-            MSc Science - Physics and Instrumentation - Researched gamma-rays
-            with the
-            <a href="https://veritas.sao.arizona.edu/" target="_blank"
-              >VERITAS</a
-            >
-            astrophysical collaboration
-          </li>
-          <li>BAI Electronic Engineering</li>
-          <li>BA Engineering Mathematics</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3><span class="prompt"></span>codingxp</h3>
-        <ul>
-          <li>
-            HTML, CSS, and JavaScript are wonderful because they allow elements
-            of visual creativity.
-          </li>
-          <li>
-            Developing software using AI tools, like Gemini, Claude, and ChatGPT
-            is great!
-          </li>
-          <li>
-            I have developed applications using C, C++, and Qt; as well as
-            JavaScript and TypeScript.
-          </li>
-          <li>
-            HDip with emphasis on Java and word-embedding projects: Algorithms;
-            SQL / Database Design; Agile; Cloud Computing / Azure / AWS;
-            Angular;
-          </li>
-          <li>
-            Experienced with Vite; Node; npm; Deno; JSON; Git; GitHub; GitHub
-            Pages; Google Play App Store.
-          </li>
-          <li>Also familiar with Bash scripting, Perl, Matlab, LaTeX.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3><span class="prompt"></span>quotedata</h3>
-        <blockquote>
-          <p>
-            I am attempting to fill a silent moment with non-relevant
-            conversation.
-          </p>
-          <footer>
-            - Lt. Cmdr. Data, <cite>Star Trek: The Next Generation</cite>
-          </footer>
-        </blockquote>
-      </section>
+      <div id="terminal"></div>
     </main>
 
     <template id="prompt-template">
-      <span class="g">conor-dowdall@github</span><span class="w">:</span
-      ><span class="b">~</span><span class="w">$</span
-      ><span>&nbsp;</span></template
-    >
+      <span class="g">conor-dowdall@github</span><span class="w">:</span><span
+        class="b"
+      >~</span><span class="w">$</span><span>&nbsp;</span>
+    </template>
   </body>
 
   <script>
+    const terminal = document.getElementById("terminal");
     const promptTemplate = document.getElementById("prompt-template");
-    const prompts = document.querySelectorAll(".prompt");
-    prompts.forEach((prompt) => {
+    let promptInput;
+
+    const commands = {
+      help: `Available commands:
+<ul>
+  <li><b>help</b> - Show this help message</li>
+  <li><b>whoami</b> - Display my bio</li>
+  <li><b>projects</b> - View my main projects</li>
+  <li><b>contact</b> - Find out how to connect with me</li>
+  <li><b>clear</b> - Clear the terminal screen</li>
+</ul>`,
+      whoami:
+        `I am a software developer with a passion for music, education, and building useful tools. I enjoy working in Linux environments and turning creative ideas into reality with code.`,
+      projects:
+        `My main passion project is <b><a href="https://sites.google.com/view/musodojo" target="_blank">Muso Dojo</a></b>.
+<br>As part of that, I created <b><a href="https://github.com/conor-dowdall/music-theory-data" target="_blank">@musodojo/music-theory-data</a></b>, a popular open-source library for music theory.`,
+      contact: `You can find me on:
+<ul>
+  <li><b>GitHub</b>: <a href="https://github.com/conor-dowdall" target="_blank">conor-dowdall</a></li>
+  <li><b>LinkedIn</b>: <a href="https://www.linkedin.com/in/conor-dowdall-066452366/" target="_blank">Conor Dowdall</a></li>
+</ul>`,
+      clear: () => {
+        terminal.innerHTML = "";
+      },
+    };
+
+    function createPromptLine() {
+      const promptLine = document.createElement("div");
+      promptLine.className = "prompt-input-line";
+
       const promptClone = promptTemplate.content.cloneNode(true);
-      prompt.append(promptClone);
-    });
+      promptLine.appendChild(promptClone);
+
+      promptInput = document.createElement("input");
+      promptInput.id = "prompt-input";
+      promptInput.type = "text";
+      promptInput.autofocus = true;
+      promptInput.addEventListener("keydown", handleInput);
+      promptLine.appendChild(promptInput);
+
+      terminal.appendChild(promptLine);
+      promptInput.focus();
+    }
+
+    function handleInput(e) {
+      if (e.key === "Enter") {
+        const command = promptInput.value.trim().toLowerCase();
+        promptInput.disabled = true; // Freeze the input
+
+        const output = document.createElement("div");
+        output.className = "output";
+
+        if (command in commands) {
+          const result = commands[command];
+          if (typeof result === "function") {
+            result();
+          } else {
+            output.innerHTML = result;
+            terminal.appendChild(output);
+          }
+        } else if (command) {
+          output.innerHTML =
+            `Command not found: ${command}. Type 'help' for a list of commands.`;
+          terminal.appendChild(output);
+        }
+
+        createPromptLine();
+        terminal.scrollTop = terminal.scrollHeight;
+      }
+    }
+
+    function initTerminal() {
+      const welcomeMessage = document.createElement("div");
+      welcomeMessage.className = "output";
+      welcomeMessage.innerHTML =
+        `Welcome! Type 'help' to see available commands.`;
+      terminal.appendChild(welcomeMessage);
+      createPromptLine();
+    }
+
+    initTerminal();
   </script>
 </html>
