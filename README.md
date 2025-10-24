@@ -1,4 +1,4 @@
-### Hi, I'm Conor Dowdall 👋
+### 🪪 Conor Dowdall
 
 I'm a software developer with a passion for music, education, and building
 useful tools. I enjoy working in Linux environments and turning creative ideas
