@@ -4,6 +4,8 @@ I'm a software developer with a passion for music, education, and building
 useful tools. I enjoy working in Linux environments and turning creative ideas
 into reality with code.
 
+I specialize in developing custom Web Components.
+
 You can see a terminal-themed version of my profile
 [on my GitHub Pages site](https://conor-dowdall.github.io/conor-dowdall/).
 
@@ -13,8 +15,8 @@ You can see a terminal-themed version of my profile
 
 My main passion project is
 **[Muso Dojo](https://sites.google.com/view/musodojo/)**, which combines music,
-music education, and software development. As part of that, I've created a
-popular open-source library:
+music education, and software development. As part of that, I've created several
+open-source libraries including:
 
 #### @musodojo/music-theory-data
 
