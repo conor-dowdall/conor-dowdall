@@ -15,7 +15,7 @@ background in other languages and environments:
 - C / C++ / Qt
 - Python
 - Java
-- Scripting & Science (Bash, LaTeX, Fortran, Perl)
+- Scripting & Science (Bash, Matlab, LaTeX, Perl)
 
 ---
 
